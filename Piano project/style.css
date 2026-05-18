@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right top,#780116,#F7B538,#FEC700,#02462E);
+}
+.piano{
+    display: flex;
+    position: relative;
+}
+.white-key{
+    width: 70px;
+    height: 280px;
+    background: white;
+    border: 1.5px solid black;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 5px 5px 2px black;
+}
+.white-key:active{
+    background:#ddd;
+    scale: 0.98;
+    box-shadow: inset 0 0 10px #000;
+}
+.black{
+    width: 45px;
+    height: 170px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 3px 3px 2px rgba(15, 14, 14, 0.53);
+}
+.black:active{
+    background:#444;
+    scale: 0.98;
+    box-shadow: inset 0 0 10px #f3ecec24;
+}
+.key0{
+    left: 48px;
+}
+.key1{
+    left: 118px;
+}
+.key2{
+    left: 258px;
+}
+.key3{
+    left: 328px;
+}
+.key4{
+    left: 398px;
+}
+.key5{
+    left: 538px;
+}
+.key6{
+    left: 608px;
+}
+.key7{
+    left: 748px;
+}
+.key8{
+    left: 818px;
+}
+.key9{
+    left: 888px;
+}
