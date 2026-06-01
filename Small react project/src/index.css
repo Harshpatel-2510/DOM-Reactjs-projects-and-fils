@@ -26,12 +26,12 @@ body::-webkit-scrollbar{
   justify-content: space-between;
 }
 .navbar{
-  position: fixed;
+  /* position: fixed;
 
   top: 0;
   left: 0;
 
-  z-index: 999;
+  z-index: 999; */
 
   width: 100%;
 
@@ -162,6 +162,7 @@ h2{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 30px;
+  
 }
 .companies{
   width:100%;
@@ -548,9 +549,6 @@ pre{
   font-size:13px;
 }
 
-
-
-
 .testimonials{
   width:100%;
   padding:40px 80px;
@@ -613,7 +611,6 @@ pre{
 
 .circle img{
   object-fit: top;
-  background-image: none;
   width:55px;
   height:55px;
   border-radius:50%;
@@ -638,4 +635,226 @@ pre{
 .active_test{
   border:1px solid #9333ea;
   box-shadow:0 0 40px rgba(147,51,234,.18);
+}
+
+
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE STYLES (For screens up to 1024px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  /* Common Padding adjustments for tablets */
+  .footer, .future, .pricing, .testimonials {
+    padding: 60px 30px;
+  }
+  
+  /* Features section grid setup */
+  .features, .pricing_cards, .test_cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  /* Future Section adjustments */
+  .future_box {
+    flex-direction: column-reverse; /* Code box upar ya niche lane ke liye */
+    gap: 40px;
+  }
+
+  .future_left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .code_box {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* For Mobile Screens (Screens up to 768px) */
+@media (max-width: 768px) {
+  
+  /* 1. Navbar Mobile Optimization */
+  .navbar {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .navbar .menu {
+    display: none; /* Mobile menu hidden by default. Aap isse JS se toggle kar sakte hain */
+  }
+
+  .navbar .button {
+    padding-right: 0;
+  }
+
+  .navbar .button button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .title img {
+    width: 140px; /* Logo thoda chota mobile ke liye */
+  }
+
+  /* 2. Footer & Hero Center Part */
+  .footer {
+    height: auto; /* Fixed height mobile par text hide kar degi */
+    padding: 80px 20px;
+  }
+
+  .center_part {
+    width: 100%;
+    height: auto;
+  }
+
+  .company_title h2{
+    font-size: 28px;
+    padding-top: 30px;
+  }
+
+  .main_a{
+    font-size: clamp(22px, 5vw, 36px);
+    line-height: 1.3;
+  }
+
+  .main_b {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+
+  .main_c {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .main_c button {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 30px;
+  }
+
+  /* 3. Companies Marquee */
+  .track h1 {
+    font-size: 40px;
+  }
+  .track {
+    gap: 40px;
+  }
+
+  /* 4. Features Section */
+  .features {
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+    padding: 25px;
+  }
+
+  .card h1 {
+    font-size: 45px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  /* 5. Future Section (Code Preview) */
+  .future {
+    border-radius: 30px; /* Mobile par border radius kam */
+    padding: 40px 15px;
+  }
+
+  .future_top h1 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .future_top p {
+    font-size: 18px;
+  }
+
+  .future_left {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .glass_card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .code_box {
+    width: 100%;
+  }
+
+  pre {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    overflow-x: auto; /* Code screen se bahar na jaye */
+  }
+
+  .floating {
+    right: 10px;
+    bottom: -15px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  /* 6. Pricing Section */
+  .pricing {
+    padding: 40px 15px;
+  }
+
+  .pricing_top h1 {
+    font-size: 38px;
+  }
+
+  .pricing_top p {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  .price_card {
+    width: 100%;
+    max-width: 340px;
+    padding: 30px 20px;
+  }
+
+  .price_card h1 {
+    font-size: 50px;
+  }
+
+  .active {
+    transform: scale(1); /* Mobile par scaled-up card layout kharab kar sakta hai */
+    margin: 10px 0;
+  }
+
+  /* 7. Testimonials Section */
+  .testimonials {
+    padding: 40px 15px;
+  }
+
+  .test_top h1 {
+    font-size: 38px;
+  }
+
+  .test_card {
+    width: 100%;
+    max-width: 340px;
+    padding: 25px;
+  }
+  
+  .test_card p {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
