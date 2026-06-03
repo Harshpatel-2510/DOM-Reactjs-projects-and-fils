@@ -57,43 +57,7 @@ const App = () => {
     likesCount: 2710,
     postCount: 73,
     viewsCount: 30100,
-  },
-  {
-    fullName: "Vikram Desai",
-    smellDescription: "Warm musk blended with woody undertones.",
-    userImage: "https://randomuser.me/api/portraits/men/7.jpg",
-    coverImage: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200",
-    likesCount: 1870,
-    postCount: 42,
-    viewsCount: 22300,
-  },
-  {
-    fullName: "Sneha Kapoor",
-    smellDescription: "Fruity fragrance with fresh berry notes.",
-    userImage: "https://randomuser.me/api/portraits/women/8.jpg",
-    coverImage: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200",
-    likesCount: 3220,
-    postCount: 88,
-    viewsCount: 38700,
-  },
-  {
-    fullName: "Aditya Rao",
-    smellDescription: "Refreshing mint with a cool citrus finish.",
-    userImage: "https://randomuser.me/api/portraits/men/9.jpg",
-    coverImage: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200",
-    likesCount: 1120,
-    postCount: 39,
-    viewsCount: 16800,
-  },
-  {
-    fullName: "Meera Nair",
-    smellDescription: "Elegant rose fragrance with soft powdery notes.",
-    userImage: "https://randomuser.me/api/portraits/women/10.jpg",
-    coverImage: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200",
-    likesCount: 4050,
-    postCount: 105,
-    viewsCount: 52800,
-  },
+  }
 ];
 
   return (
