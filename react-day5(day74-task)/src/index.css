@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.colors{
+  background-color: #BFBFBF;
+}
+
+.text_color{
+  color: #000000;
+  font-size: 30px;
+}
+
+.bg_color{
+  background-color: #5988c5bb;
+  border: "1px solid #ccc";
+}

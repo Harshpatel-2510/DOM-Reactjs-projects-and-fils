@@ -1,16 +1,29 @@
-// Practical-1 ==> Two way binding && Form hendling
+// Practical-1 ==> Two way binding && Form hendling 
 
 import React,{ useState } from 'react'
 
 const App = () => {
-  
+
+  const [username, setUsername] = useState('')
+
+  const [allUser, setallUser] = useState([])
+
   // submit karne par page reload na ho oske liye
   const submitHandler = (e)=>{
     e.preventDefault()
-    console.log('Form submited');
+    // console.log(username);        // input box ma je pan text hase te react ma jatu reje
+
+    const newAllUsers = [...allUser]          //  {title, email}
+    newAllUsers.push(username)
+    
+    console.log(newAllUsers)
+    
+    setallUser(newAllUsers)
+
+    setUsername('')        // submit thay pachi input box khali thay jase
   }
 
-  const [username, setUsername] = useState('')
+  
 
   return (
 
@@ -22,6 +35,7 @@ const App = () => {
         type="text"
         placeholder='Enter name'
         value={username}
+        required
         onChange={(e)=>{
           setUsername(e.target.value)
         }}
@@ -30,10 +44,16 @@ const App = () => {
         //   console.log(e.target.value);
         // }}
 
-        // value='aha' //value fix ho jayegi or aap usme kuch bhi change nahi kar pavo ge
+        // value='aha'      //value fix ho jayegi or aap usme kuch bhi change nahi kar pavo ge
         />
         <button>Submit</button>
       </form>
+
+      {
+        allUser.map(function(elem,idx){
+          return <h4 key={idx}>{elem}</h4>
+        })
+      }
     </div>
   )
 }
