@@ -84,7 +84,9 @@ const App = () => {
         Create Now
         </button>
       </form>
-      
+
+
+      {/* ==> Without any use of Components file <== */}
       {/* <div className="px-4 py-10 gap-3 flex flex-wrap">
         {allUser.map(function(elem,idx){
           return <div key={idx} className='w-[23vw] py-8 px-8 rounded-xl text-center flex items-center flex-col bg-white text-black'>
@@ -99,6 +101,8 @@ const App = () => {
         })}
       </div> */}
 
+
+      {/* ==> useing Components file <== */}
       <div className="px-4 py-10 gap-3 flex flex-wrap">
         {allUser.map(function(elem,idx){
           return <Card key={idx} idx={idx} elem={elem} deleteElement={deleteElement} />
