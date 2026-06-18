@@ -78,8 +78,8 @@ const App = () => {
 
 
 
-  // const [allPokemon, setAllPokemon] = useState([])
-
+  
+// ==> Practical_3 <==
   const [Names, setNames] = useState('')
   const [count, setCount] = useState(0)
 
@@ -106,7 +106,7 @@ const App = () => {
         setCount(count+1)
       }}
       >Click here..</button>
-      
+
     </div>
   )
 }
